@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "lib": [
+      "ES6","DOM"
+    ],
+    "target": "ES6",
+    "noImplicitAny": true,
+    "outDir": "./dist",
+    "rootDir": "./src",
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}
