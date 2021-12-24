@@ -10,14 +10,10 @@
     }
 
     //public(default), private, protected
-    class CoffeeMachine implements CoffeeMaker {
+    abstract class CoffeeMachine implements CoffeeMaker {
         private static BEANS_GRAM_PER_SHOT = 7 // class level
 
         public constructor( private coffeeBeans: number = 0) {}
-
-        static makeMachine(coffeeBeans: number):CoffeeMachine {
-            return new CoffeeMachine(coffeeBeans)
-        }
 
         fillCoffeeBeans(beans: number) {
             if(beans < 0) {
@@ -38,13 +34,8 @@
             console.log('heating up...')
         }
 
-        private extract(shots: number): CoffeeCup {
-            console.log(`Pulling ${shots} shots...`)
-            return {
-                shots,
-                hasMilk: false,
-            }
-        }
+        protected abstract extract(shots: number): CoffeeCup;
+
         makeCoffee(shots: number): CoffeeCup {
             this.grindBeans(shots);
             this.prepreheat();
@@ -56,41 +47,33 @@
         }
     }
     class CaffeLatteMachine extends CoffeeMachine {
-        constructor(beans: number, private readonly serialNumber: string) {
+        constructor(beans: number) {
             super(beans);
         }
         private steamMilk(): void {
             console.log('steaming milk')
         }
-        makeCoffee(shots: number): CoffeeCup {
+        protected extract(shots: number): CoffeeCup {
             this.steamMilk();
             return {
                 shots,
-                hasMilk: true,
+                hasMilk: true
             }
         }
     }
     class SweetCoffeeMaker extends CoffeeMachine {
-        constructor(
-            beans: number,
-            private readonly sugar: number) {
-            super(beans);
-        }
-        private makeSweety(): void {
-            console.log(`get ${this.sugar} sugar`)
-        }
-        makeCoffee(shots: number): CoffeeCup {
-            const coffee = super.makeCoffee(shots)
-
-            this.makeSweety();
+        protected extract(shots: number): CoffeeCup {
             return {
-                ...coffee,
-                hasSugar: true,
+                shots,
+                hasSugar: true
             }
         }
     }
 
     const machines: CoffeeMaker[] = [
+        new CoffeeMachine(16),
+        new CaffeLatteMachine(16, 'as23'),
+        new SweetCoffeeMaker(16, 4),
         new CoffeeMachine(16),
         new CaffeLatteMachine(16, 'as23'),
         new SweetCoffeeMaker(16, 4)
