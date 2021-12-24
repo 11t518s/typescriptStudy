@@ -96,7 +96,7 @@
         new SweetCoffeeMaker(16, 4)
     ];
     machines.forEach(machine => {
-        console.log('---------------------------')
-        machine.makeCoffee(1)
+        console.log('---------------------------');
+        machine.makeCoffee(1);
     })
 }
