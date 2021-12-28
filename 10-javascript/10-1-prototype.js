@@ -29,6 +29,7 @@ console.log(machine2);
 function LatteMachine(milk) {
   this.milk = milk;
 }
+
 LatteMachine.prototype = Object.create(CoffeeMachine.prototype);
 LatteMachine.prototype.makeCoffee();
 const latteMachine = new LatteMachine(123);
