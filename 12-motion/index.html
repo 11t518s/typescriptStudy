@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta name="'viewport" content="width=device-width, initial-scale=1.0" />
     <script src="10-1-prototype"></script>
     <link href="style/style.css" rel="stylesheet" />
+    <script type="module" src="/dist/app.js" defer></script>
   </head>
-  <body class="app">
-    <header>
-      <h1>Motion</h1>
-      <button class="create-button">IMAGE</button>
-      <button class="create-button">VIDEO</button>
-      <button class="create-button">NOTE</button>
-      <button class="create-button">TODO</button>
-    </header>
-    <main>여기에 이제 컴포넌트들이 나오겠지~</main>
-    <footer>
-      <p>@ Copyright its me, all rights reserved</p>
-    </footer>
+  <body>
+    <div class="app">
+      <header class="banner">
+        <h1 class="banner__title">Motion</h1>
+        <ul class="control-panel">
+          <li><button id="new-image" class="create-button">IMAGE</button></li>
+          <li><button id="new-video" class="create-button">VIDEO</button></li>
+          <li><button id="new-note" class="create-button">NOTE</button></li>
+          <li><button id="new-todo" class="create-button">TODO</button></li>
+        </ul>
+      </header>
+      <main class="document">여기에 이제 컴포넌트들이 나오겠지~</main>
+      <footer class="footer">
+        <p>@ Copyright its me, all rights reserved</p>
+      </footer>
+    </div>
   </body>
 </html>
