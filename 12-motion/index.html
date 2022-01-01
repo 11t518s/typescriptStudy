@@ -1,26 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta name="'viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta content="width=device-width, initial-scale=1.0" name="'viewport"/>
     <script src="10-1-prototype"></script>
-    <link href="style/style.css" rel="stylesheet" />
-    <script type="module" src="/dist/app.js" defer></script>
-  </head>
-  <body>
-    <div class="app">
-      <header class="banner">
+    <link href="style/style.css" rel="stylesheet"/>
+    <script defer src="/dist/app.js" type="module"></script>
+</head>
+<body>
+<div class="app">
+    <header class="banner">
         <h1 class="banner__title">Motion</h1>
         <ul class="control-panel">
-          <li><button id="new-image" class="create-button">IMAGE</button></li>
-          <li><button id="new-video" class="create-button">VIDEO</button></li>
-          <li><button id="new-note" class="create-button">NOTE</button></li>
-          <li><button id="new-todo" class="create-button">TODO</button></li>
+            <li>
+                <button class="create-button" id="new-image">IMAGE</button>
+            </li>
+            <li>
+                <button class="create-button" id="new-video">VIDEO</button>
+            </li>
+            <li>
+                <button class="create-button" id="new-note">NOTE</button>
+            </li>
+            <li>
+                <button class="create-button" id="new-todo">TODO</button>
+            </li>
         </ul>
-      </header>
-      <main class="document">여기에 이제 컴포넌트들이 나오겠지~</main>
-      <footer class="footer">
+    </header>
+    <main class="document"></main>
+    <footer class="footer">
         <p>@ Copyright its me, all rights reserved</p>
-      </footer>
-    </div>
-  </body>
+    </footer>
+
+
+</div>
+</body>
 </html>
