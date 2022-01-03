@@ -107,3 +107,8 @@ body {
     border-top: 1px solid var(--border-color);
     text-align: center;
 }
+
+.todo__checkbox {
+    color: white;
+    font-size: 50px;
+}

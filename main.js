@@ -1,7 +1,8 @@
-console.log("hello world");
-var Car = /** @class */ (function () {
-    function Car() {
-        this.engine = 1;
+{
+    console.log("hello world");
+    class Car {
+        constructor() {
+            this.engine = 1;
+        }
     }
-    return Car;
-}());
+}
