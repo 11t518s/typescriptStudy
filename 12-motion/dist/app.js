@@ -9,11 +9,11 @@ class App {
         this.page.attachTo(appRoot);
         const image = new ImageComponent("Image Title", "http://picsum.photos/600/300");
         image.attachTo(appRoot, "beforeend");
-        const video = new VideoComponent("video title", "https://www.youtube.com/embed/yKgwe7s_dxM");
+        const video = new VideoComponent("video title", "https://www.youtube.com/watch?v=Waa0kweRC2w");
         video.attachTo(appRoot, "beforeend");
         const note = new NoteComponent("note title", "note text");
         note.attachTo(appRoot, "beforeend");
-        const todo = new TodoComponent("todo Title", "todo Isdfsdfsdfsdfstem");
+        const todo = new TodoComponent("todo Title", "todo");
         todo.attachTo(appRoot, "beforeend");
     }
 }

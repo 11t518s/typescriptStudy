@@ -21,7 +21,8 @@ export class VideoComponent extends BaseComponent<HTMLElement> {
 
   private convertToEmbeddedURL(url: string): string {
     const videoId = url.split("=");
-    console.log(videoId);
-    return `https://www.youtube.com/embed/${videoId}`;
+    console.log(videoId[1]);
+    console.log("here");
+    return `https://www.youtube.com/embed/${videoId[1]}`;
   }
 }
