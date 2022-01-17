@@ -17,5 +17,5 @@
   }
 
   const either = new SimpleEither(4, 5);
-  const best = new SimpleEither(4, "hello");
+  const best = new SimpleEither(4, "hellohello");
 }
